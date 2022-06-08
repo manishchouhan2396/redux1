@@ -39,7 +39,7 @@
 
 #bt-1{
   height: 7vh;
-  width: 35vh;
+  width: 15vh;
   border-radius: 1vh;
   margin: 1vh;
 }
@@ -48,4 +48,20 @@
   grid-template-columns: repeat(2 , 1fr);
   max-width: 200px;
   margin: auto;
+}
+#flex{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 450px;
+  margin: 0 20% 0 20%;
+  gap: 40px;
+}
+
+#bt-2{
+  margin-top: 18px;
+  font-size: 25px;
+  padding: 20px;
+  width: 30px;
+  height:30px;
+  border-radius: 1vh;
 }
