@@ -7,7 +7,6 @@ import { add, substract, div, M, Add, Sub } from './store/action';
 function App() {
   const dispatch = useDispatch();
   const count = useSelector((state => state.count));
-  const count1 = useSelector((state => state.count1));
   return (
     <div className="App">
       <h1>Counter :{count}</h1>
