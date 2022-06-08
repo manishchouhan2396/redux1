@@ -1,4 +1,4 @@
-import { Counter_Decreament, Counter_Div, Counter_Increament, Counter_M} from "./action.type";
+import { Counter_Decreament, Counter_Div, Counter_Increament, Counter_M , Counter_Add , Counter_Sub} from "./action.type";
 
 // reducer
 export const reducer = (state , action) =>{
@@ -19,6 +19,14 @@ export const reducer = (state , action) =>{
         }
         case Counter_M:{
             state.count = state.count*2;
+            return {...state}
+        }
+        case Counter_Add:{
+            state.count +=2;
+            return {...state}
+        }
+        case Counter_Sub:{
+            state.count -=2;
             return {...state}
         }
         default:{

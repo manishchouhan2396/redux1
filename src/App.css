@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+#bt-1{
+  height: 7vh;
+  width: 35vh;
+  border-radius: 1vh;
+  margin: 1vh;
+}
+#grid{
+  display: grid;
+  grid-template-columns: repeat(2 , 1fr);
+  max-width: 200px;
+  margin: auto;
+}
