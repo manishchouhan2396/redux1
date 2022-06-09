@@ -1,32 +1,43 @@
-import { Counter_Decreament, Counter_Div, Counter_Increament, Counter_M , Counter_Add , Counter_Sub} from "./action.type";
+import { Counter_Decreament, 
+         Counter_Div, 
+         Counter_Increament, 
+         Counter_M , 
+         Counter_Add , 
+         Counter_Sub} from "./action.type";
 
 // reducer
-export const reducer = (state , action) =>{
+export const reducer = (state , {type , payload}) =>{
     // console.log(state ,action)
 
-    switch(action.type){
+    switch(type){
         case Counter_Increament:{
-            state.count++
+            state.count+=payload;
             return {...state}
         }
         case Counter_Decreament:{
-            state.count--;
+            state.count-=payload;
             return {...state}
         }
         case Counter_Div:{
-            state.count = Math.floor(state.count/2);
-            return {...state}
+            let result = state.count % payload;
+            if(result !== 0){
+                alert("Division Not Possible")
+                return {...state}
+            }else{
+                state.count = state.count / payload;
+                return {...state};
+            }
         }
         case Counter_M:{
-            state.count = state.count*2;
+            state.count = state.count*payload;
             return {...state}
         }
         case Counter_Add:{
-            state.count +=2;
+            state.count +=payload;
             return {...state}
         }
         case Counter_Sub:{
-            state.count -=2;
+            state.count -=payload;
             return {...state}
         }
         default:{
